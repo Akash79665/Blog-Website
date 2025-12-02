@@ -42,7 +42,7 @@ Before you begin, ensure you have the following installed:
 
 ### 1. Clone the Repository
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/Akash79665/Blog-Website.git
 cd blog-platform
 ```
 
@@ -219,8 +219,8 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 ## 👨‍💻 Author
 
 Your Name
-- GitHub: [@yourusername](https://github.com/yourusername)
-- Email: your.email@example.com
+- GitHub: https://github.com/Akash79665/Blog-Website.git
+- Email: apturkhade@gmail.com
 
 ## 🙏 Acknowledgments
 
