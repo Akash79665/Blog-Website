@@ -197,10 +197,10 @@ MONGODB_URI=mongodb://localhost:27017/blog-db
 ![Home Page](screenshots/HomeScreen.png)
 
 ### Post Detail
-![Post Detail](https://via.placeholder.com/800x400?text=Post+Detail)
+![Post Detail](screenshots/Post%20Detail.png)
 
 ### Comments Section
-![Comments](https://via.placeholder.com/800x400?text=Comments+Section)
+![Comments](screenshots/Comments%20Section.png)
 
 ## 🤝 Contributing
 
