@@ -194,7 +194,7 @@ MONGODB_URI=mongodb://localhost:27017/blog-db
 ## 📸 Screenshots
 
 ### Home Page
-![Home Page] (screenshots/HomeScreen.png)
+![Home Page](screenshots/HomeScreen.png)
 
 ### Post Detail
 ![Post Detail](https://via.placeholder.com/800x400?text=Post+Detail)
