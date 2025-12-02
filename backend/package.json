@@ -14,7 +14,7 @@
     "express",
     "mongodb"
   ],
-  "author": "",
+  "author": "Akash Turkhade",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
