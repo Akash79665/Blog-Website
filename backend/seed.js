@@ -51,25 +51,24 @@ const samplePosts = [
 
 async function seedDatabase() {
   try {
-    await mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/blog-db', {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
-    });
+    // FIXED - Removed deprecated options
+    await mongoose.connect(process.env.MONGODB_URI);
     
     console.log('✅ Connected to MongoDB');
+    console.log(`📊 Database: ${mongoose.connection.name}`);
     
     // Clear existing posts
     await Post.deleteMany({});
     console.log('🗑️  Cleared existing posts');
     
     // Insert sample posts
-    await Post.insertMany(samplePosts);
-    console.log('✅ Sample posts added successfully!');
+    const insertedPosts = await Post.insertMany(samplePosts);
+    console.log(`✅ ${insertedPosts.length} sample posts added successfully!`);
     
     mongoose.connection.close();
     console.log('👋 Database connection closed');
   } catch (error) {
-    console.error('❌ Error seeding database:', error);
+    console.error('❌ Error seeding database:', error.message);
     process.exit(1);
   }
 }

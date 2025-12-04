@@ -1,12 +1,8 @@
-// ============================================
-// COMPLETE App.js FILE
-// Copy this entire file to: frontend/src/App.js
-// ============================================
-
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Search, Calendar, User, Tag, Share2, Facebook, Twitter, Linkedin, Home } from 'lucide-react';
 import './App.css';
+
 
 const API_URL = 'http://localhost:5000/api/posts';
 
@@ -56,7 +52,7 @@ export default function App() {
     }
 
     try {
-      const response = await axios.post(`${API_URL}/${selectedPost._id}/comments`, {
+      const response = await axios.post(`http://localhost:5000/api/posts/${selectedPost._id}/comments`, {
         name: commentName,
         message: commentMessage
       });
@@ -258,8 +254,8 @@ export default function App() {
                   {selectedPost.comments.length === 0 ? (
                     <p className="no-comments">No comments yet. Be the first to comment!</p>
                   ) : (
-                    selectedPost.comments.map(comment => (
-                      <div key={comment._id} className="comment-item">
+                    selectedPost.comments.map((comment, index) => (
+                      <div key={comment._id || index} className="comment-item">
                         <div className="comment-header">
                           <User size={18} />
                           <span className="comment-author">{comment.name}</span>
